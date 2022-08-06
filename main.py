@@ -65,7 +65,9 @@ def main():
     for pipe, model in pipelines:
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
+        print("=================================================")
         print(pipe)
+        print("=================================================")
         # evaluation
         evaluation_metrics(y_test, y_pred, X_train)
 
